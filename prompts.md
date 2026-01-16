@@ -1,4 +1,5 @@
-Prompt 1:
-How to create a basic React app using vite?
-Prompt 2:
-I m getting an error "npm not recognized". How to fix it?
+In this project, I used ChatGPT to understand HTML, CSS, and basic website structure.
+ChatGPT helped me with prompts for navbar design, buttons, and layout ideas.
+I also used ChatGPT to implement dark mode and responsive design.
+It was useful in fixing code errors and styling issues.
+Overall, ChatGPT was used for learning, practice, and improving the project.
