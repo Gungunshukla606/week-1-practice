@@ -1,0 +1,174 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/*Light Mode*/
+body {
+  background: f8fafc;
+  color: 020617;
+}
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #0f172a;
+}
+
+.logo-img {
+  height: 40px;
+}
+
+/* Nav Right*/
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: rgb(56, 189, 248);
+}
+
+/* Dark Mode Button*/
+#themeBtn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.primary-btn {
+  padding: 18px 45px;
+  background: #38bdf8;
+  color: #020617;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary-btn:hover {
+  background: #0ea5e9;
+  transform: scale(1.08);
+}
+
+/* Services */
+.services {
+  padding: 70px 40px;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 34px;
+  margin-bottom: 40px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.card {
+  padding: 30px;
+  border-radius: 10px;
+  background: #f8fafc;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Footer */
+.footer {
+  background: #020617;
+  color: #cbd5f5;
+  text-align: center;
+  padding: 20px;
+}
+
+/*Dark Mode*/
+body.dark {
+  background: #020617;
+  color: white;
+}
+body.dark .navbar {
+  background: #020617;
+}
+body.dark .hero {
+  background: linear-gradient(135deg, #020617, #000);
+}
+body.dark .nav-links a {
+  color: e5e7eb;
+}
+body.dark .primary-btn {
+  background: #0ea5e9;
+  color: #020617;
+}
+body.dark .card {
+  background: #020617;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+}
