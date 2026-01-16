@@ -6,11 +6,12 @@
   font-family: Arial, sans-serif;
 }
 
-/*Light Mode*/
+/* Light Mode */
 body {
-  background: f8fafc;
-  color: 020617;
+  background: #f8fafc;
+  color: #020617;
 }
+
 /* Navbar */
 .navbar {
   position: sticky;
@@ -27,7 +28,7 @@ body {
   height: 40px;
 }
 
-/* Nav Right*/
+/* Nav Right */
 .nav-right {
   display: flex;
   align-items: center;
@@ -36,21 +37,20 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 .nav-links a {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
   font-size: 15px;
-  transition: 0.3s;
 }
 
 .nav-links a:hover {
-  color: rgb(56, 189, 248);
+  color: #38bdf8;
 }
 
-/* Dark Mode Button*/
+/* Dark Button */
 #themeBtn {
   background: none;
   border: none;
@@ -59,7 +59,15 @@ body {
   color: white;
 }
 
-/* Hero Section */
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Hero */
 .hero {
   height: 90vh;
   background: linear-gradient(135deg, #0f172a, #020617);
@@ -69,7 +77,6 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 20px;
 }
 
 .hero h1 {
@@ -78,35 +85,22 @@ body {
 }
 
 .hero p {
-  font-size: 18px;
   margin-bottom: 25px;
 }
 
 .primary-btn {
   padding: 18px 45px;
   background: #38bdf8;
-  color: #020617;
   border: none;
   border-radius: 10px;
   font-size: 20px;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-.primary-btn:hover {
-  background: #0ea5e9;
-  transform: scale(1.08);
 }
 
 /* Services */
 .services {
   padding: 70px 40px;
   text-align: center;
-}
-
-.services h2 {
-  font-size: 34px;
-  margin-bottom: 40px;
 }
 
 .service-grid {
@@ -117,14 +111,8 @@ body {
 
 .card {
   padding: 30px;
-  border-radius: 10px;
   background: #f8fafc;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
+  border-radius: 10px;
 }
 
 /* Footer */
@@ -135,33 +123,43 @@ body {
   padding: 20px;
 }
 
-/*Dark Mode*/
+/* Dark Mode */
 body.dark {
   background: #020617;
   color: white;
 }
+
 body.dark .navbar {
   background: #020617;
 }
-body.dark .hero {
-  background: linear-gradient(135deg, #020617, #000);
-}
+
 body.dark .nav-links a {
-  color: e5e7eb;
+  color: #e5e7eb;
 }
-body.dark .primary-btn {
-  background: #0ea5e9;
-  color: #020617;
-}
+
 body.dark .card {
   background: #020617;
-  color: white;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
   .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #0f172a;
+    flex-direction: column;
+    width: 200px;
+    padding: 15px;
     display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
   }
 
   .service-grid {
